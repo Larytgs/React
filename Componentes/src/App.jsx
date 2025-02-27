@@ -1,7 +1,7 @@
 //Componente PAI
 import './App.css'
 
-//Importar o componente FILHO
+//Importar o componente FILHOS
 import ComponenteFuncional from './componentes/ComponenteFuncnional';
 import ClassComponent from './componentes/ClassComponent';
 import PropsComponent from './componentes/PropsComponent';
