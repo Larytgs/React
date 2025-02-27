@@ -1,5 +1,4 @@
-//Componente de classe
-
+//Componente de classe FILHO
 import React from "react";
 
 //Criar uma classe, estender uma classe PAI
@@ -9,11 +8,11 @@ class ClassComponent extends React.Component {
     render() {
         return (
             <div>
-                <h2>Componnete de Classe</h2>
+                <h2>Componente de Classe</h2>
             </div>
         )
     }
 }
 
-//Expostar
+//Exportar
 export default ClassComponent;
