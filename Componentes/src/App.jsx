@@ -4,6 +4,7 @@ import './App.css'
 //Importar o componente FILHO
 import ComponenteFuncional from './componentes/ComponenteFuncnional';
 import ClassComponent from './componentes/ClassComponent';
+import PropsComponent from './componentes/PropsComponent';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
     {/* utilizando o componente importado no jsx */}
     <ComponenteFuncional></ComponenteFuncional>
     <ClassComponent></ClassComponent>
+    
+    {/* componente com dados */}
+    <PropsComponent nome = 'Laryssa' idade = {26} ></PropsComponent>
     </>
   )
 }

@@ -5,7 +5,7 @@ function ComponenteFuncional(){
     //retorna um objeto com jsx
     return( //parenteses
         <div>
-            <h1>Testando o novo Componente</h1>
+            <h2>Testando o novo Componente</h2>
         </div>
     )
 }

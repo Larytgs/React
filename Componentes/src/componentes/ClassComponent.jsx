@@ -8,7 +8,7 @@ class ClassComponent extends React.Component {
     render() {
         return (
             <div>
-                <h2>Componente de Classe</h2>
+                <h3>Componente de Classe</h3>
             </div>
         )
     }
