@@ -4,6 +4,7 @@ import './App.css'
 //importar os filhos
 import gerenciamento from './componente/gerenciamentoEstado'
 
+
 function App() {
 
   return (
