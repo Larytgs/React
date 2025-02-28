@@ -6,7 +6,6 @@ import gerenciamento from './componente/gerenciamentoEstado'
 
 function App() {
 
-
   return (
     <>
       <h1>Projeto 3</h1>
