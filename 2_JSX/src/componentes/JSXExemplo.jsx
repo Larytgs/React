@@ -66,7 +66,6 @@ const JSXExemplo = () => {
         <h3>Expressao lógica</h3>
         <p>{userRole === "admin" && "Voce é um admin"}</p>
 
-
         <h3>RENDERIZAÇÃO DE LISTAS</h3>
         <div>
             <ul>
