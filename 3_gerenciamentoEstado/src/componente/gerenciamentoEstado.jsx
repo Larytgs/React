@@ -31,7 +31,8 @@ import {useState} from "react";
 
         return (
             <div>
-                <h2>Contador:</h2>
+                <h2>Gerenciamento Estado - UseState</h2>
+                <h3>Contador:</h3>
                 <p>Voce clicou {count} vezes.</p>
                 <button onClick={Increment}>Incrementar</button>
 

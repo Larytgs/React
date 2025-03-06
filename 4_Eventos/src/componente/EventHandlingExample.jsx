@@ -22,7 +22,7 @@ const EventHandlingExample = () => {
   
   return (
     <div>
-        <h2>EventHandlingExample</h2>
+        <h2>EventHandling</h2>
         
         <button onClick={() => alert("Evento inline")}>Clique aqui</button> {/*evento inline */}
         <button onClick={handleClick}>Clique aqui 2</button> 
