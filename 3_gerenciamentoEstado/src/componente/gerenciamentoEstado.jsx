@@ -1,7 +1,7 @@
 //Componente FILHO
 
 import {useState} from "react";
-//useState = os hooks, gerencia os estados
+//O useState é um hook do React que permite adicionar variáveis de estado a componentes de função. É uma ferramenta que ajuda a gerenciar o estado de componentes funcionais.
 
     const Gerenciamento = () => {
        
