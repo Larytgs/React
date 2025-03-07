@@ -11,15 +11,18 @@ const TodoApp = () => {
 
     //Adicionar tarefas
     const handleSubmit = (e) =>{
-        e.prevenDefault;
+        e.preventDefault();
 
-        if(inputValue.trim() !== '') {
-            const newTodo = {
+        if(inputValue.trim() !== '') { //se tem algo digitado ali
+            const newTodo = { //ele vai criar a lista
                 id: Date.now(),
-                text: inputValue
+                text: inputValue,
             }
 
-            setTodos((prevTodos) => [...prevTodos, newTodo])
+            setTodos((prevTodos) => [...prevTodos, newTodo]) //pegar o array de todos e colocar la dentro do newTodo 
+            // Os 3 pontinhos é 'todos eles'
+
+            setInputValue("") //Depois eu zero o input, para add outro
         }
     }
 
@@ -43,6 +46,16 @@ const TodoApp = () => {
 
         {/* Lista de tarefas */}
         {todos.length === 0 && <p className="empty">Não há tarefas.</p>}
+
+
+        {/* Apresentação da lista */}
+        <ul className="todo-list">
+            {todos.map((todo) => {//pegar cada map
+                <li key={todo.id} className="todo-item">
+                    {todo.text}
+                </li>
+            })}
+        </ul>
     </div>
   )
 }

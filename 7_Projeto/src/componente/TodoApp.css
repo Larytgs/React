@@ -1,9 +1,11 @@
 body{
-    background-color: rgb(189, 184, 184);
+    background-color: rgb(189, 184, 184);    
+    justify-content: center;
 }
 
 .app-container{
-    max-width: 400px;
+    width: 600px;
+    margin: 0 auto;
     text-align: center;
     padding: 20px;
     border: 1px solid black;
@@ -27,8 +29,12 @@ body{
     flex: 1;
     padding: 10px;
     margin-right: 10px;
+    background-color: rgb(48, 47, 47); 
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.input-field::placeholder{
+    color: rgba(255, 255, 255, 0.671);
 }
 
 .add-button{
@@ -37,9 +43,23 @@ body{
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
+
+    transition: transform 0.5s;
 }
+.add-button:hover{
+    transform: scale(1.1);
+}
+
 
 .empty{
     text-align: center;
-    padding: auto;
+}
+
+
+.todo-list{
+    padding: 10px;
+}
+.todo-item{
+    padding: 5px;
+    color: black;
 }
