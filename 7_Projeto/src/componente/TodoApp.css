@@ -57,9 +57,20 @@ body{
 
 
 .todo-list{
-    padding: 10px;
+    padding: 10px 10%;
+    list-style: none;
+    text-align: left;
 }
 .todo-item{
-    padding: 5px;
+    padding: 3px 5px; margin-bottom: 3px;
+    background-color: #ccc;
     color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete{
+    background-color: transparent;
+    border: none;
 }

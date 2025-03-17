@@ -26,6 +26,12 @@ const TodoApp = () => {
         }
     }
 
+    //Excluir tarefa
+    const deleteTask = (id) => {
+        setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+    };//filter(): Cria uma nova lista contendo apenas os itens cujo id não corresponde ao que foi clicado.
+      //setTodos(): Atualiza o estado removendo a tarefa selecionada.
+
 
   return (
     <div className="app-container">
@@ -51,9 +57,12 @@ const TodoApp = () => {
         {/* Apresentação da lista */}
         <ul className="todo-list">
             {todos.map((todo) => {//pegar cada map
-                <li key={todo.id} className="todo-item">
-                    {todo.text}
-                </li>
+                return(
+                    <li key={todo.id} className="todo-item">
+                        {todo.text}
+                        <button onClick={() => deleteTask(todo.id)} type="submit" className="delete" >❌</button>
+                    </li>
+                )
             })}
         </ul>
     </div>
