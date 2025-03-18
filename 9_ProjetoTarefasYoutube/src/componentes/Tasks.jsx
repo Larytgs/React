@@ -1,13 +1,13 @@
 import { SlArrowRight } from "react-icons/sl";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-function Tasks(props) {
+function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
   return (
     <ul className="space-y-3 p-6 bg-slate-200 shadow">
-      {props.tasks.map((tasks) => (
+      {tasks.map((tasks) => (
         <li key={tasks.id} className="flex gap-2">
           <button
-            onClick={() => props.onTaskClick(tasks.id)}
+            onClick={() => onTaskClick(tasks.id)}
             className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${
               tasks.isCompleted && "line-through"
             }`}
@@ -18,7 +18,7 @@ function Tasks(props) {
             <SlArrowRight />
           </button>
           <button
-            onClick={() => props.onDeleteTaskClick(tasks.id)}
+            onClick={() => onDeleteTaskClick(tasks.id)}
             className="bg-slate-400 text-white p-2 rounded-md "
           >
             <FaRegTrashAlt />
