@@ -46,6 +46,7 @@ function App() {
     setTasks(newTasks);
   }
 
+  //monta a nova tarefa, pegando os paramentos que digitei, atualizando em baixo
   function onAddTaskSubmit(title, description) {
     const newTasks = {
       id: tasks.length + 1,
@@ -53,7 +54,7 @@ function App() {
       description,
       isCompleted: false,
     };
-    setTasks([...Tasks, newTasks]);
+    setTasks([...tasks, newTasks]);
   }
 
   return (
