@@ -2,13 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import TaskPage from "./paginas/TaskPage.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"; //qnd inst o router
+import TaskPage from "./paginas/TaskPage.jsx"; //importar a nova pagina
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Ola</div>,
+    element: <App />,
   },
   {
     path: "/task", //o nome da pagina
@@ -19,6 +19,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-    <App />
+    {/* <App /> */}
   </StrictMode>
 );
