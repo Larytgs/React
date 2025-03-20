@@ -1,5 +1,6 @@
 import { FaChevronLeft } from "react-icons/fa";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import Title from "../componentes/Title";
 
 function TaskPage() {
   const [searchParams] = useSearchParams(); //permite gerenciar os parâmetros de pesquisa de uma URL.
@@ -18,9 +19,7 @@ function TaskPage() {
           >
             <FaChevronLeft></FaChevronLeft>
           </button>
-          <h1 className="text-4xl text-slate-200 font-bold text-center">
-            Detalhes da Tarefa
-          </h1>
+          <Title>Detalhes da Tarefa</Title>
         </div>
         <div className="bg-slate-200 p-4 rounded-md">
           <h1 className="text-xl font-bold text-black">{title}</h1>
