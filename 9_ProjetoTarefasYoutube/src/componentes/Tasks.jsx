@@ -1,6 +1,7 @@
 import { SlArrowRight } from "react-icons/sl";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Button from "./button";
 
 function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
   const navigate = useNavigate(); //permite navegar entre páginas
@@ -25,18 +26,12 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
           >
             {tasks.title}
           </button>
-          <button
-            onClick={() => onSeeDetailClick(tasks)}
-            className="bg-slate-400 text-white p-2 rounded-md "
-          >
+          <Button onClick={() => onSeeDetailClick(tasks)}>
             <SlArrowRight />
-          </button>
-          <button
-            onClick={() => onDeleteTaskClick(tasks.id)}
-            className="bg-slate-400 text-white p-2 rounded-md "
-          >
+          </Button>
+          <Button onClick={() => onDeleteTaskClick(tasks.id)}>
             <FaRegTrashAlt />
-          </button>
+          </Button>
         </li>
       ))}
     </ul>

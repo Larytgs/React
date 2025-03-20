@@ -1,5 +1,12 @@
-// function Button() {
-//   return <h1></h1>;
-// }
+function Button(props) {
+  return (
+    <button
+      {...props}
+      className={"bg-slate-400 text-left text-white p-2 rounded-md "}
+    >
+      {props.children}
+    </button>
+  );
+}
 
-// export default Button;
+export default Button;
