@@ -1,29 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddTasks from "./componentes/AddTasks";
 import Tasks from "./componentes/Tasks";
 import "./index.css"; // Certifique-se de importar corretamente
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Estudar Programação",
-      description: "Para se tornar um dev",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      title: "Estudar Ingles",
-      description: "Para se tornar fluente",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      title: "Estudar Matematica",
-      description: "Para se tornar um dev Full stack",
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
+
+  //Salvar no localStorage
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]); //toda vez que salvar uma tarefa ele salva no localStorage
 
   //uma função que altera o estado d euma tarefa
   function onTaskClick(tasksId) {
