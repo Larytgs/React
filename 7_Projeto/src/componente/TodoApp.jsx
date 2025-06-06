@@ -123,29 +123,26 @@ const TodoApp = () => {
               ) : (
                 <>
                   <div className="task-content">
+                    <button
+                      onClick={() => startEditing(todo.id, todo.text)}
+                      className="edit-button"
+                    >
+                      ✏️
+                    </button>
+
                     <span
                       onClick={() => toggleComplete(todo.id)}
                       className="todo-text"
                     >
                       {todo.text}
                     </span>
-                    <div className="task-actions">
-                      <button
-                        onClick={() => startEditing(todo.id, todo.text)}
-                        className="edit-button"
-                      >
-                        ✏️
-                      </button>
 
-                      {todo.text}
-
-                      <button
-                        onClick={() => deleteTask(todo.id)}
-                        className="delete"
-                      >
-                        ❌
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => deleteTask(todo.id)}
+                      className="delete"
+                    >
+                      ❌
+                    </button>
                   </div>
                 </>
               )}

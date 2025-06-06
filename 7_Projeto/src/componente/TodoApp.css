@@ -50,19 +50,24 @@ body {
   transform: scale(1.1);
 }
 
+/* O quadro de baixo */
 .todo-list {
-  padding: 10px 10%;
   list-style: none;
-  text-align: left;
+  padding: 0;
 }
+
 .todo-item {
-  padding: 3px 5px;
-  margin-bottom: 3px;
-  background-color: #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
   color: black;
+  border-radius: 4px;
+}
+
+.edit-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .add-button,
@@ -88,17 +93,6 @@ body {
   color: white;
 }
 
-.edit-button {
-  background-color: #2195f3ea;
-  color: white;
-  margin-right: 0px;
-}
-
-.delete {
-  background-color: #ff4444;
-  color: white;
-}
-
 .add-button:hover,
 .save-button:hover {
   background-color: #45a049;
@@ -113,46 +107,33 @@ body {
   background-color: #1976d2;
 }
 
-.todo-list {
-  list-style: none;
-  padding: 0;
-}
-
-.todo-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-}
-
-.todo-item.completed .todo-text {
-  text-decoration: line-through;
-  color: #888;
-}
-
+/* Quando adicionar uma tarefa */
 .task-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
+}
+
+.edit-button {
+  background-color: #2195f3ea;
+  color: white;
 }
 
 .todo-text {
   flex: 1;
   cursor: pointer;
+  /* margin: 0px 10px; */
+}
+/* Para riscar o item */
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
 }
 
-.task-actions {
-  display: flex;
-  gap: 5px;
-}
-
-.edit-container {
-  display: flex;
-  gap: 10px;
-  width: 100%;
+.delete {
+  background-color: #ff4444;
+  color: white;
 }
 
 .empty {
