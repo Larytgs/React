@@ -1,76 +1,75 @@
-body{
-    background-color: rgb(189, 184, 184);    
-    justify-content: center;
+body {
+  background-image: linear-gradient(to top, #206094, #4ba2d3, #206094);
+  justify-content: center;
 }
 
-.app-container{
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: rgba(128, 128, 128, 0.705)
+.app-container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgba(85, 83, 83, 0.705);
 }
 
-.title{
-    color: #043e80;
-    text-align: center;
-    font-size: 2em;
+.title {
+  color: #4ba2d3;
+  text-align: center;
+  font-size: 2em;
 }
 
-.form-container{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.input-field{
-    flex: 1;
-    padding: 10px;
-    margin-right: 10px;
-    background-color: rgb(48, 47, 47); 
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.input-field {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: rgb(48, 47, 47);
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-.input-field::placeholder{
-    color: rgba(255, 255, 255, 0.671);
-}
-
-.add-button{
-    background-color: #0367da;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-
-    transition: transform 0.5s;
-}
-.add-button:hover{
-    transform: scale(1.1);
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.671);
 }
 
+.add-button {
+  background-color: #0367da;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
 
-.empty{
-    text-align: center;
+  transition: transform 0.5s;
+}
+.add-button:hover {
+  transform: scale(1.1);
 }
 
-
-.todo-list{
-    padding: 10px 10%;
-    list-style: none;
-    text-align: left;
-}
-.todo-item{
-    padding: 3px 5px; margin-bottom: 3px;
-    background-color: #ccc;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.empty {
+  text-align: center;
 }
 
-.delete{
-    background-color: transparent;
-    border: none;
+.todo-list {
+  padding: 10px 10%;
+  list-style: none;
+  text-align: left;
+}
+.todo-item {
+  padding: 3px 5px;
+  margin-bottom: 3px;
+  background-color: #ccc;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
 }
