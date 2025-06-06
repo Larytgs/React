@@ -8,6 +8,10 @@ const TodoApp = () => {
   //Estado de texto de tarefas
   const [inputValue, setInputValue] = useState("");
 
+  // Estado para controlar a tarefa em edição
+  const [editingId, setEditingId] = useState(null);
+  const [editText, setEditText] = useState("");
+
   //Adicionar tarefas
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -105,13 +109,14 @@ const TodoApp = () => {
                 </div>
               ) : (
                 <>
-                  {todo.text}
                   <button
                     onClick={() => startEditing(todo.id, todo.text)}
                     className="edit-button"
                   >
                     ✏️
                   </button>
+                  {todo.text}
+
                   <button
                     onClick={() => deleteTask(todo.id)}
                     className="delete"
@@ -121,16 +126,6 @@ const TodoApp = () => {
                 </>
               )}
             </li>
-            // <li key={todo.id} className="todo-item">
-            //   {todo.text}
-            //   <button
-            //     onClick={() => deleteTask(todo.id)}
-            //     type="submit"
-            //     className="delete"
-            //   >
-            //     ❌
-            //   </button>
-            // </li>
           );
         })}
       </ul>
