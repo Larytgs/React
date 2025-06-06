@@ -121,7 +121,6 @@ body {
 .todo-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #f9f9f9;
@@ -133,18 +132,30 @@ body {
   color: #888;
 }
 
+.task-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .todo-text {
   flex: 1;
   cursor: pointer;
 }
 
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
 .edit-container {
   display: flex;
-  gap: 0px;
+  gap: 10px;
   width: 100%;
 }
 
 .empty {
   text-align: center;
-  color: black;
+  color: #666;
 }

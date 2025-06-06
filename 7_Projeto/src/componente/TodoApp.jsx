@@ -98,7 +98,10 @@ const TodoApp = () => {
         {todos.map((todo) => {
           //pegar cada map
           return (
-            <li key={todo.id} className="todo-item">
+            <li
+              key={todo.id}
+              className={`todo-item ${todo.completed ? "completed" : ""}`}
+            >
               {editingId === todo.id ? (
                 <div className="edit-container">
                   <input
@@ -119,28 +122,31 @@ const TodoApp = () => {
                 </div>
               ) : (
                 <>
-                  <span
-                    onClick={() => toggleComplete(todo.id)}
-                    className="todo-text"
-                  >
-                    {todo.text}
-                  </span>
+                  <div className="task-content">
+                    <span
+                      onClick={() => toggleComplete(todo.id)}
+                      className="todo-text"
+                    >
+                      {todo.text}
+                    </span>
+                    <div className="task-actions">
+                      <button
+                        onClick={() => startEditing(todo.id, todo.text)}
+                        className="edit-button"
+                      >
+                        ✏️
+                      </button>
 
-                  <button
-                    onClick={() => startEditing(todo.id, todo.text)}
-                    className="edit-button"
-                  >
-                    ✏️
-                  </button>
+                      {todo.text}
 
-                  {todo.text}
-
-                  <button
-                    onClick={() => deleteTask(todo.id)}
-                    className="delete"
-                  >
-                    ❌
-                  </button>
+                      <button
+                        onClick={() => deleteTask(todo.id)}
+                        className="delete"
+                      >
+                        ❌
+                      </button>
+                    </div>
+                  </div>
                 </>
               )}
             </li>
