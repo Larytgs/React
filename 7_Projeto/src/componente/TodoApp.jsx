@@ -22,6 +22,7 @@ const TodoApp = () => {
         //ele vai criar a lista
         id: Date.now(),
         text: inputValue,
+        completed: false, // Novo campo para rastrear conclusão
       };
 
       setTodos((prevTodos) => [...prevTodos, newTodo]); //pegar o array de todos e colocar la dentro do newTodo
@@ -61,6 +62,15 @@ const TodoApp = () => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   }; //filter(): Cria uma nova lista contendo apenas os itens cujo id não corresponde ao que foi clicado.
   //setTodos(): Atualiza o estado removendo a tarefa selecionada.
+
+  // Alternar estado de conclusão
+  const toggleComplete = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
 
   return (
     <div className="app-container">
@@ -109,12 +119,20 @@ const TodoApp = () => {
                 </div>
               ) : (
                 <>
+                  <span
+                    onClick={() => toggleComplete(todo.id)}
+                    className="todo-text"
+                  >
+                    {todo.text}
+                  </span>
+
                   <button
                     onClick={() => startEditing(todo.id, todo.text)}
                     className="edit-button"
                   >
                     ✏️
                   </button>
+
                   {todo.text}
 
                   <button
