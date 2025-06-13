@@ -1,14 +1,27 @@
 // import React from "react";
 
+import { useState } from "react";
+import Lista, { Title, Content } from "./style";
+
 export default function TaskList({ title }) {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((currentCount) => {
+      return currentCount + 1;
+    });
+  };
   return (
     <div className="bg-[#509bce] p-1">
-      <div className="gap-4 bg-[#509bce]">
-        <div className="p-1 font-bold bg-[#295470] text-white text-center rounded-md">
-          {title}
-        </div>
-        <div className="py-4 px-1 flex columns-3 bg-[#509bce]"></div>
-      </div>
+      <Lista>
+        <Title>{title}</Title>
+        <Content>
+          {count}
+          <button className="bg-white" onClick={increment}>
+            Incrementar
+          </button>
+        </Content>
+      </Lista>
     </div>
   );
 }
