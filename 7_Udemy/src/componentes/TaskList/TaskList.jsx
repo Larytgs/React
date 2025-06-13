@@ -11,6 +11,7 @@ export default function TaskList({ title }) {
       return currentCount + 1;
     });
   };
+
   return (
     <div className="bg-[#509bce] p-1">
       <Lista>
