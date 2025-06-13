@@ -1,3 +1,3 @@
 export default function TaskList(props) {
-  return <div>{props.title}</div>;
+  return <div className="gap-3">{props.title}</div>;
 }
