@@ -13,12 +13,12 @@ export default function TaskList({ title }) {
   };
 
   return (
-    <div className="bg-[#509bce] p-1">
+    <div className="bg-[#2C084C] p-1 rounded-md">
       <Lista>
         <Title>{title}</Title>
         <Content>
           {count}
-          <button className="bg-white" onClick={increment}>
+          <button className="bg-white rounded-md" onClick={increment}>
             Incrementar
           </button>
         </Content>

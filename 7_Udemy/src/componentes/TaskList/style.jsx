@@ -1,10 +1,10 @@
 function Lista(props) {
-  return <div className="gap-4 bg-[#509bce]">{props.children}</div>;
+  return <div className="gap-4 ">{props.children}</div>;
 }
 
 function Title(props) {
   return (
-    <div className="p-1 font-bold bg-[#295470] text-white text-center rounded-md">
+    <div className="p-1 font-bold bg-[#601F9E] text-white text-center rounded-t-md">
       {props.children}
     </div>
   );
@@ -12,7 +12,9 @@ function Title(props) {
 
 function Content(props) {
   return (
-    <div className="py-4 px-1 flex flex-col bg-[#509bce]">{props.children}</div>
+    <div className="py-4 px-1 flex flex-col bg-[#A054DE] rounded-b-md">
+      {props.children}
+    </div>
   );
 }
 
