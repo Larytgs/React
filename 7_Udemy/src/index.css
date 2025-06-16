@@ -8,5 +8,14 @@
 }
 
 body {
-  background-color: #431172;
+  background-image: linear-gradient(
+    to bottom,
+    #2c084c,
+    #431172,
+    #601f9e,
+    #a054de
+  );
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
