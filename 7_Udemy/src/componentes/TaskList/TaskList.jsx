@@ -18,7 +18,10 @@ export default function TaskList({ title }) {
         <Title>{title}</Title>
         <Content>
           {count}
-          <button className="bg-white rounded-md" onClick={increment}>
+          <button
+            className="bg-transparent border-2 w-28 m-auto rounded-md"
+            onClick={increment}
+          >
             Incrementar
           </button>
         </Content>
