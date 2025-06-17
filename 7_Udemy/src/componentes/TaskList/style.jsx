@@ -1,5 +1,5 @@
 function Lista(props) {
-  return <div className="gap-4 ">{props.children}</div>;
+  return <div className="gap-4 text-center">{props.children}</div>;
 }
 
 function Title(props) {

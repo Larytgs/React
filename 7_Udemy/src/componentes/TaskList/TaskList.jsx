@@ -1,15 +1,11 @@
-// import React from "react";
-
-import { useState } from "react";
 import Lista, { Title, Content } from "./style";
 
-export default function TaskList({ title }) {
-  const [count, setCount] = useState(0);
+import PropTypes from "prop-types";
 
-  const increment = () => {
-    setCount((currentCount) => {
-      return currentCount + 1;
-    });
+export default function TaskList({ title, onAddTask, tasks }) {
+  // Nova função para chamar a tarefa
+  const addTask = () => {
+    onAddTask("Nova tarefa", "pendente");
   };
 
   return (
@@ -17,15 +13,20 @@ export default function TaskList({ title }) {
       <Lista>
         <Title>{title}</Title>
         <Content>
-          {count}
-          <button
-            className="bg-transparent border-2 w-28 m-auto rounded-md"
-            onClick={increment}
-          >
-            Incrementar
+          {tasks.map((task) => {
+            return <div key={task.id}>{task.title}</div>;
+          })}
+          <button className="bg-white p-1 mt-2" onClick={addTask}>
+            Adicionar Tarefas
           </button>
         </Content>
       </Lista>
     </div>
   );
 }
+
+TaskList.prototype = {
+  title: PropTypes.string.isRequired,
+  onAddTask: PropTypes.func.isRequired,
+  tasks: PropTypes.array.isRequired,
+};
